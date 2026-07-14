@@ -1,0 +1,34 @@
+# Bubble Sort O(n²)
+# Insertion Sort O(n²)
+
+arr=[64,34,25,12,22,11,90]
+
+print("Bubble Sort Trace")
+
+n=len(arr)
+
+for i in range(n):
+
+    for j in range(0,n-i-1):
+
+        if arr[j]>arr[j+1]:
+            arr[j],arr[j+1]=arr[j+1],arr[j]
+
+    print("Pass",i+1,arr)
+
+print("Sorted:",arr)
+
+arr2=[64,34,25,12,22,11,90]
+
+for i in range(1,len(arr2)):
+
+    key=arr2[i]
+    j=i-1
+
+    while j>=0 and arr2[j]>key:
+        arr2[j+1]=arr2[j]
+        j-=1
+
+    arr2[j+1]=key
+
+print("Insertion Sort:",arr2)
